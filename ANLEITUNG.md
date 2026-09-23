@@ -135,3 +135,42 @@ legen (gleiches Format `.webp`), dann wie oben hochladen.
     Registergericht: Amtsgericht Jena
     Registernummer: HRB 503606
     Eine Umsatzsteuer-Identifikationsnummer nach § 27a UStG liegt nicht vor.
+
+---
+
+## Google Search Console (eingerichtet 23.09.2026)
+
+- Property-Typ: **Domain** (`sc-domain:lack-goehring.de`), deckt Haupt- und www-Adresse ab
+- Bestätigt per TXT-Eintrag bei STRATO:
+  `google-site-verification=mvOpCHO3jVS_1jQyuY_4LJs84CGm1m3uwFSEcNRxZHM`
+  **Diesen Eintrag nicht löschen** — sonst geht die Bestätigung verloren.
+- Sitemap `https://www.lack-goehring.de/sitemap.xml` eingereicht, Status Success, 9 Seiten
+- Erfassung der Startseite angefordert
+
+## Weiterleitungen der alten Domains (vorbereitet 23.09.2026)
+
+In Vercel sind diese vier Adressen als **308 Permanent Redirect** auf
+`https://www.lack-goehring.de` angelegt. Sie greifen, sobald das DNS der
+jeweiligen Domain auf Vercel zeigt:
+
+    xn--auto-lackiererei-ghring-plc.de       (= auto-lackiererei-göhring.de)
+    www.xn--auto-lackiererei-ghring-plc.de
+    auto-lackiererei-goehring.de
+    www.auto-lackiererei-goehring.de
+
+Zu setzende DNS-Einträge (für beide Domains identisch):
+
+    A      @     216.198.79.1
+    CNAME  www   c1f8b2740cebb43f.vercel-dns-017.com.
+
+> **⚠️ An beiden alten Domains hängt E-Mail.** Die MX-Einträge dürfen auf
+> keinen Fall verändert oder durch einen Nameserver-Wechsel verloren gehen:
+>
+> - `auto-lackiererei-göhring.de` → Google Workspace (aspmx.l.google.com u.a.)
+> - `auto-lackiererei-goehring.de` → mail.ud11.udmedia.de
+>
+> Es dürfen **nur A und CNAME** geändert werden, die Nameserver bleiben beim
+> bisherigen Anbieter (udmedia bzw. Wix).
+
+Zuständig: Umlaut-Domain der externe Dienstleister (udmedia), Domain ohne
+Umlaut wird laut Vercel über **Wix** verwaltet (Mac).
