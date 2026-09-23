@@ -1,0 +1,35 @@
+DNS-Sicherung lack-goehring.de  --  23.09.2026 14:43
+================================================
+
+--- NS (@) ---
+shades14.rzone.de.
+docks03.rzone.de.
+
+--- SOA (@) ---
+shades14.rzone.de. hostmaster.strato-rz.de. 2025010714 86400 7200 604800 300
+
+--- A (@) ---
+81.169.145.151
+
+--- AAAA (@) ---
+
+--- MX (@) ---
+5 smtpin.rzone.de.
+
+--- TXT (@) ---
+"v=spf1 redirect=_spf.strato.com"
+
+--- CNAME (@) ---
+
+--- www ---
+lack-goehring.de.
+81.169.145.151
+lack-goehring.de.
+
+--- Mail-relevante Unterdomains ---
+mail: ;; connection timed out; no servers could be reached 
+smtp: ;; connection timed out; no servers could be reached 
+imap: ;; connection timed out; no servers could be reached 
+pop: ;; connection timed out; no servers could be reached 
+autodiscover: ;; connection timed out; no servers could be reached 
+_dmarc: ;; connection timed out; no servers could be reached 

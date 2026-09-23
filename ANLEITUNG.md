@@ -1,5 +1,24 @@
 # Website Auto-Lackiererei Göhring GmbH — Anleitung
 
+**Stand: 23.09.2026 — die Seite ist live unter https://www.lack-goehring.de**
+
+| Was | Wo |
+|---|---|
+| Live-Adresse | https://www.lack-goehring.de |
+| Quellcode | github.com/anakoenig226/autolack |
+| Hosting | Vercel, Projekt `autolackiererei-goehring` (Konto `autolack`) |
+| Technische Ersatzadresse | autolackiererei-goehring.vercel.app |
+| Domain & DNS | STRATO, Auftragsnummer 9168074 |
+| E-Mail | STRATO, unverändert (MX/SPF nicht angetastet) |
+
+Gesetzte DNS-Einträge bei STRATO:
+
+    A      @     216.198.79.1
+    CNAME  www   c1f8b2740cebb43f.vercel-dns-017.com.
+
+Der Stand **vor** der Umstellung liegt in `dns-sicherung-vorher.txt`.
+
+
 Dieser Ordner enthält die vollständige, fertige Website. Sie ist statisch,
 es gibt keine Datenbank und keinen Server im Hintergrund.
 
@@ -27,7 +46,10 @@ unter `/leistungen/…`.
 - **E-Mail:** info@lack-goehring.de
 - **Adresse:** August-Brömel-Straße 3, 99310 Arnstadt
 
-## Veröffentlichen
+## Veröffentlichen (erledigt am 23.09.2026)
+
+> Die Schritte 1–4 sind abgeschlossen. Sie bleiben hier als Doku stehen,
+> falls die Seite jemals erneut aufgesetzt werden muss.
 
 ### 1. Konten anlegen
 
