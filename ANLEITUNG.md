@@ -32,6 +32,8 @@ es gibt keine Datenbank und keinen Server im Hintergrund.
 | `videos/` | 2 Videos (Streiflicht, Sprühnebel) |
 | `fonts/` | Schriften Inter und Instrument Serif, lokal eingebunden |
 | `og-image.jpg` | Vorschaubild beim Teilen per WhatsApp / Facebook |
+| `favicon.ico/.svg`, `icon-*.png`, `apple-touch-icon.png` | Das kleine Logo im Browser-Tab und in Google-Ergebnissen (G-Monogramm) |
+| `site.webmanifest` | Icons und Farben, wenn die Seite aufs Handy gelegt wird |
 | `robots.txt`, `sitemap.xml` | Damit Google alle Seiten findet |
 | `vercel.json` | Sorgt dafür, dass Unterseiten direkt aufrufbar sind |
 | `serve.py` | Nur zum lokalen Ansehen: `python3 serve.py`, dann http://127.0.0.1:8787 |
