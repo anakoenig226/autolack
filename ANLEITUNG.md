@@ -174,3 +174,46 @@ Zu setzende DNS-Einträge (für beide Domains identisch):
 
 Zuständig: Umlaut-Domain der externe Dienstleister (udmedia), Domain ohne
 Umlaut wird laut Vercel über **Wix** verwaltet (Mac).
+
+---
+
+## Weiterleitung auto-lackiererei-goehring.de — AKTIV seit 24.09.2026
+
+Gesetzt im **Wix-Konto von Jana Göhring** (`lack-goehring@gmx.de`),
+Menü: Domains → „…" → DNS-Einträge verwalten.
+
+Vorher (Wix-Website):
+
+    A      @     185.230.63.107 / .186 / .171
+    CNAME  www   cdn3.wixdns.net
+
+Jetzt (Vercel-Weiterleitung):
+
+    A      @     216.198.79.1
+    CNAME  www   c1f8b2740cebb43f.vercel-dns-017.com
+
+> Hinweis: Wix akzeptiert **keinen Punkt am Ende** des CNAME-Werts.
+
+Unverändert geblieben (E-Mail):
+
+    MX            10 mail.ud11.udmedia.de
+    CNAME  mail   mail.ud11.udmedia.de
+
+Alle vier Varianten (mit/ohne www, http/https) landen per 308 auf
+`https://www.lack-goehring.de`. Damit führt auch der **Website-Button im
+Google-Unternehmensprofil** auf die neue Seite.
+
+Der DNS-Stand davor liegt in `dns-wix-domain-vorher.txt`, die alten
+Wix-Seiteninhalte in `wix-seite-archiv/`.
+
+**Die Wix-Website ist damit offline** (sie bleibt im Wix-Konto erhalten).
+Vor einer Kündigung des Wix-Abos klären: Bei wem ist die Domain registriert?
+Wix zeigt sie als „von Drittanbieter verwaltet" an.
+
+### Weiterhin offen
+
+`auto-lackiererei-göhring.de` (mit Umlaut) — das erste Google-Ergebnis.
+DNS liegt bei Rene Langenhan / Leuchtpunktart (udmedia), nicht erreichbar.
+Die 308-Weiterleitung ist in Vercel vorbereitet und greift, sobald dort
+A und CNAME gesetzt sind. Alternative: Domainumzug zu STRATO per KK-Antrag
+durch die Geschäftsführerin. Achtung: Google-Workspace-MX und DNSSEC.

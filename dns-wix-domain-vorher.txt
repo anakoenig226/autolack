@@ -1,0 +1,28 @@
+DNS-Sicherung  auto-lackiererei-goehring.de  (Wix)
+Stand: 24.09.2026 15:14  |  abgefragt an ns2.wixdns.net
+============================================================
+
+--- SOA (@) ---
+ns2.wixdns.net. support.wix.com. 2021101916 10800 3600 1209600 3600
+
+--- NS (@) ---
+ns2.wixdns.net.
+ns3.wixdns.net.
+
+--- A (@) ---
+185.230.63.186
+185.230.63.107
+185.230.63.171
+
+--- AAAA (@) ---
+
+--- MX (@) ---
+10 mail.ud11.udmedia.de.
+
+--- TXT (@) ---
+
+--- CAA (@) ---
+
+--- www ---
+cdn3.wixdns.net.
+cdn3.wixdns.net.
