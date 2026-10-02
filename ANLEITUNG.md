@@ -219,3 +219,54 @@ DNS liegt bei Rene Langenhan / Leuchtpunktart (udmedia), nicht erreichbar.
 Die 308-Weiterleitung ist in Vercel vorbereitet und greift, sobald dort
 A und CNAME gesetzt sind. Alternative: Domainumzug zu STRATO per KK-Antrag
 durch die Geschäftsführerin. Achtung: Google-Workspace-MX und DNSSEC.
+
+---
+
+## Weiterleitung auto-lackiererei-göhring.de — AKTIV seit 02.10.2026
+
+**Wichtige Erkenntnis:** Das udmedia-Konto gehört der **Auto-Lackiererei Göhring
+GmbH selbst** (Kundennummer 11341, Account `ud11_s00`) — nicht Rene Langenhan.
+Er war dort nur als Dienstleister tätig. Ein Domainumzug zu STRATO ist damit
+hinfällig, die Domain war die ganze Zeit in eigener Hand.
+
+Beide alten Domains werden in diesem Konto verwaltet:
+`auto-lackiererei-goehring.de` (Nameserver bei Wix) und
+`auto-lackiererei-göhring.de` (Nameserver bei udmedia).
+
+Zugang: https://login.udmedia.de → Domains → DNS-Einstellungen (Stiftsymbol)
+
+Geändert wurden:
+
+    A      @     194.117.254.51  ->  216.198.79.1
+    A      *     194.117.254.51  ->  216.198.79.1
+    AAAA   @     2a05:d580:0:1337::33  ->  GELÖSCHT
+    AAAA   *     2a05:d580:0:1337::33  ->  GELÖSCHT
+
+Die AAAA-Einträge mussten weg, sonst hätten Besucher über IPv6 weiterhin den
+alten Server erreicht. Die fünf **MX-Einträge (Google Workspace) blieben
+unverändert** — dort werden laut Inhaberin ohnehin keine Postfächer genutzt.
+
+> **Eigenheit des udmedia-Editors:** Löschungen greifen sofort, Textänderungen
+> erst mit „Änderungen speichern" — und gehen verloren, wenn die Tabelle
+> zwischendurch neu lädt. Deshalb immer **erst löschen, dann ändern, dann
+> speichern.**
+
+Alle vier Varianten (mit/ohne www, http/https) liefern 308 auf
+`https://www.lack-goehring.de`, SSL-Zertifikat von Let's Encrypt vorhanden.
+
+### Alte Website
+
+Die alte statische Seite von 2009/2021 liegt weiterhin auf dem udmedia-Webspace,
+ist über keine echte Domain mehr erreichbar. Die generische Adresse
+`ud11-500.ud11.udmedia.de` wurde im Kundenmenü auf „offline" gestellt; udmedia
+liefert dort allerdings noch aus. Eine Google-Abfrage (`site:ud11.udmedia.de`)
+ergab **keine Treffer** — die Adresse ist nicht indexiert.
+
+Eine vollständige Kopie der alten Seite (7 Seiten, 40 Bilder) liegt in
+`udmedia-alte-seite/`. Ein Löschen der Dateien auf dem Webspace ist damit
+gefahrlos möglich, aber nicht nötig.
+
+**Kostenfrage:** Der Webspace-Tarif „StartXL 3.0" bei udmedia wird jetzt nur
+noch für die Domainverwaltung und die alten Dateien gebraucht. Ob ein
+kleinerer Tarif reicht, sollte geprüft werden — die Domains müssen dabei
+erhalten bleiben.
