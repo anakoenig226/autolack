@@ -270,3 +270,56 @@ gefahrlos möglich, aber nicht nötig.
 noch für die Domainverwaltung und die alten Dateien gebraucht. Ob ein
 kleinerer Tarif reicht, sollte geprüft werden — die Domains müssen dabei
 erhalten bleiben.
+
+---
+
+## DNS von Wix zurück zu udmedia geholt (02.10.2026)
+
+**Anlass:** Das Wix-Abo soll gekündigt werden. Die Weiterleitung von
+`auto-lackiererei-goehring.de` lag aber in **Wix' DNS-Zone** — die Domain
+selbst ist bei udmedia registriert, nur die Nameserver zeigten auf Wix.
+Bei einer Kündigung hätte Wix die Zone gelöscht und die Domain wäre
+komplett ausgefallen (nicht nur die Weiterleitung).
+
+Die Domain hat **kein DNSSEC**, der Nameserver-Wechsel war daher unkritisch.
+
+Durchgeführt in udmedia: Domains → DNS-Einstellungen → Stiftsymbol →
+Reiter **„Standard-Nameserver"** → Rückfrage mit OK bestätigt. Danach legt
+udmedia eine Standardzone mit den eigenen Werten an, die korrigiert wurde:
+
+    A      @     194.117.254.51  ->  216.198.79.1
+    A      *     194.117.254.51  ->  216.198.79.1
+    AAAA   @     GELÖSCHT
+    AAAA   *     GELÖSCHT
+    MX     @     10 mail.ud11.udmedia.de   (unverändert gelassen)
+
+### ⚠️ Wix erst kündigen, wenn die Umstellung durch ist
+
+Die Delegierung bei der DENIC braucht einige Stunden. Prüfen lässt sie
+sich im Terminal:
+
+    dig +short auto-lackiererei-goehring.de NS
+
+- Antwort `ns2.wixdns.net, ns3.wixdns.net` → **noch nicht umgestellt, nicht kündigen**
+- Antwort `ns3.powerdns.de, ns4.powerdns.de` → **umgestellt, Wix kann weg**
+
+Danach zusätzlich prüfen, dass die Weiterleitung noch greift:
+
+    curl -sIL https://www.auto-lackiererei-goehring.de/ | grep -i location
+
+Sie muss auf `https://www.lack-goehring.de/` zeigen.
+
+## Laufende Kosten — Überblick
+
+| Posten | Status |
+|---|---|
+| Vercel (Hosting neue Seite) | kostenlos (Hobby) |
+| GitHub (Quellcode) | kostenlos |
+| STRATO (lack-goehring.de + E-Mail) | wird gebraucht |
+| udmedia (beide alten Domains) | wird gebraucht — hier liegt die Registrierung |
+| **Wix Premium** | **kann nach der DNS-Umstellung gekündigt werden** |
+
+Der udmedia-Tarif „StartXL 3.0" hostet nach dem Löschen der alten Dateien
+keine Website mehr, wird aber für die Domainregistrierung weiter benötigt.
+Ein kleinerer Domain-Tarif könnte reichen — bei udmedia erfragen, dabei
+unbedingt den Erhalt beider Domains sicherstellen.
