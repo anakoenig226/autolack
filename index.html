@@ -64,5 +64,177 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- ===================================================================
+         Kontakt-Ebene: schwebender WhatsApp-Button + Kontaktauswahl.
+         Bewusst ausserhalb von #root, damit der React-Code unberuehrt bleibt.
+         Entfernen = diesen Block loeschen, sonst aendert sich nichts.
+         =================================================================== -->
+    <style>
+      :root { --wa-green:#25D366; --wa-green-dark:#1EBE5A; --gh-copper:#C07A45; }
+
+      /* WhatsApp-Symbol im Fussbereich in Markenfarbe */
+      #root a[href*="wa.me"] {
+        background: var(--wa-green) !important;
+        color: #fff !important;
+        border-color: var(--wa-green) !important;
+      }
+      #root a[href*="wa.me"] svg { color: #fff !important; }
+
+      /* --- Schwebender Button --- */
+      #gh-wa {
+        position: fixed; z-index: 2147483000;
+        right: calc(16px + env(safe-area-inset-right, 0px));
+        bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+        width: 60px; height: 60px; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        background: var(--wa-green); color: #fff;
+        box-shadow: 0 6px 22px rgba(0,0,0,.45), 0 0 0 0 rgba(37,211,102,.55);
+        transition: transform .2s ease, background .2s ease;
+        animation: gh-wa-ring 3.4s ease-out 1.5s 3;
+      }
+      #gh-wa:hover { background: var(--wa-green-dark); transform: scale(1.06); }
+      #gh-wa svg { width: 32px; height: 32px; }
+      @keyframes gh-wa-ring {
+        0%   { box-shadow: 0 6px 22px rgba(0,0,0,.45), 0 0 0 0 rgba(37,211,102,.55); }
+        70%  { box-shadow: 0 6px 22px rgba(0,0,0,.45), 0 0 0 16px rgba(37,211,102,0); }
+        100% { box-shadow: 0 6px 22px rgba(0,0,0,.45), 0 0 0 0 rgba(37,211,102,0); }
+      }
+      @media (prefers-reduced-motion: reduce) { #gh-wa { animation: none; } }
+
+      /* --- Auswahlfenster --- */
+      #gh-pick[hidden] { display: none !important; }
+      #gh-pick {
+        position: fixed; inset: 0; z-index: 2147483100;
+        display: flex; align-items: center; justify-content: center;
+        padding: 20px; background: rgba(0,0,0,.72);
+        -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+      }
+      #gh-pick .gh-card {
+        width: 100%; max-width: 380px; background: #121212;
+        border: 1px solid rgba(255,255,255,.12); border-radius: 18px;
+        padding: 26px 22px 22px; color: #fff; position: relative;
+        box-shadow: 0 24px 60px rgba(0,0,0,.6);
+      }
+      #gh-pick h2 {
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: 25px; line-height: 1.2; margin: 0 0 6px; font-weight: 400;
+      }
+      #gh-pick .gh-sub { font-size: 13px; opacity: .62; margin: 0 0 20px; }
+      #gh-pick a {
+        display: flex; align-items: center; gap: 13px;
+        padding: 14px 16px; border-radius: 12px; margin-bottom: 10px;
+        text-decoration: none; color: #fff;
+        border: 1px solid rgba(255,255,255,.14);
+        transition: background .18s ease, border-color .18s ease;
+      }
+      #gh-pick a:hover { background: rgba(255,255,255,.07); }
+      #gh-pick a.gh-wa-opt {
+        background: var(--wa-green); border-color: var(--wa-green);
+      }
+      #gh-pick a.gh-wa-opt:hover { background: var(--wa-green-dark); }
+      #gh-pick a > span { display: block; min-width: 0; }
+      #gh-pick .gh-l1 { display: block; font-size: 15px; font-weight: 600; letter-spacing: .01em; }
+      #gh-pick .gh-l2 { display: block; font-size: 12px; opacity: .72; margin-top: 3px; line-height: 1.35; }
+      #gh-pick svg { flex: 0 0 auto; width: 22px; height: 22px; }
+      #gh-pick .gh-x {
+        position: absolute; top: 12px; right: 12px;
+        width: 34px; height: 34px; border: 0; border-radius: 50%;
+        background: rgba(255,255,255,.08); color: #fff;
+        font-size: 19px; line-height: 1; cursor: pointer;
+      }
+      #gh-pick .gh-x:hover { background: rgba(255,255,255,.16); }
+      #gh-pick .gh-note {
+        font-size: 11px; opacity: .45; margin: 14px 0 0; text-align: center;
+      }
+    </style>
+
+    <script>
+    (function () {
+      var WA   = "https://wa.me/491735755304?text=" +
+                 encodeURIComponent("Hallo, ich habe eine Frage zu meinem Fahrzeug.");
+      var TEL  = "tel:+493628641510";
+      var MAIL = "mailto:info@lack-goehring.de?subject=" +
+                 encodeURIComponent("Terminanfrage – Schaden schätzen");
+
+      var ICON_WA = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.02h-.01c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.22-8.23 8.22z"/></svg>';
+      var ICON_TEL  = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.26-1.26a2 2 0 0 1 2.11-.45c.9.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
+      var ICON_MAIL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg>';
+
+      /* ---------- schwebender Button ---------- */
+      var fab = document.createElement("a");
+      fab.id = "gh-wa";
+      fab.href = WA;
+      fab.target = "_blank";
+      fab.rel = "noopener";
+      fab.setAttribute("aria-label", "Anfrage über WhatsApp senden");
+      fab.title = "Per WhatsApp anfragen";
+      fab.innerHTML = ICON_WA;
+      document.body.appendChild(fab);
+
+      /* ---------- Auswahlfenster ---------- */
+      var ov = document.createElement("div");
+      ov.id = "gh-pick";
+      ov.hidden = true;
+      ov.setAttribute("role", "dialog");
+      ov.setAttribute("aria-modal", "true");
+      ov.setAttribute("aria-label", "Kontaktmöglichkeit wählen");
+      ov.innerHTML =
+        '<div class="gh-card">' +
+          '<button class="gh-x" type="button" aria-label="Schließen">&times;</button>' +
+          '<h2>Wie dürfen wir Sie erreichen?</h2>' +
+          '<p class="gh-sub">Schildern Sie uns Ihren Schaden — Sie hören innerhalb eines Werktags von uns.</p>' +
+          '<a class="gh-wa-opt" href="' + WA + '" target="_blank" rel="noopener">' + ICON_WA +
+            '<span><span class="gh-l1">WhatsApp schreiben</span>' +
+            '<span class="gh-l2">Am schnellsten — Fotos direkt mitschicken</span></span></a>' +
+          '<a href="' + TEL + '">' + ICON_TEL +
+            '<span><span class="gh-l1">Anrufen</span>' +
+            '<span class="gh-l2">03628 / 64 15 10</span></span></a>' +
+          '<a href="' + MAIL + '">' + ICON_MAIL +
+            '<span><span class="gh-l1">E-Mail schreiben</span>' +
+            '<span class="gh-l2">info@lack-goehring.de</span></span></a>' +
+          '<p class="gh-note">Mo–Do 7–18 Uhr · Fr 7–14 Uhr</p>' +
+        '</div>';
+      document.body.appendChild(ov);
+
+      var lastFocus = null;
+      function open(e) {
+        if (e) e.preventDefault();
+        lastFocus = document.activeElement;
+        ov.hidden = false;
+        document.documentElement.style.overflow = "hidden";
+        var first = ov.querySelector("a");
+        if (first) first.focus();
+      }
+      function close() {
+        ov.hidden = true;
+        document.documentElement.style.overflow = "";
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      }
+      ov.addEventListener("click", function (e) {
+        if (e.target === ov || e.target.classList.contains("gh-x")) close();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !ov.hidden) close();
+      });
+      ov.querySelectorAll(".gh-card a").forEach(function (a) {
+        a.addEventListener("click", function () { setTimeout(close, 120); });
+      });
+
+      /* ---------- Anfrage-Schaltflächen abfangen ----------
+         Delegiert auf document, damit React-Neuaufbauten nichts kaputtmachen.
+         Die Navigationsleiste ("Kontakt") bleibt bewusst ein Sprunglink.     */
+      document.addEventListener("click", function (e) {
+        var a = e.target.closest && e.target.closest("a");
+        if (!a || ov.contains(a) || a === fab) return;
+        var href = a.getAttribute("href") || "";
+        var txt  = (a.innerText || "").toLowerCase();
+        var isCta = /termin anfragen|schaden sch/.test(txt);
+        if (!isCta) return;
+        if (href.indexOf("#kontakt") === -1 && href.indexOf("mailto:") !== 0) return;
+        open(e);
+      }, true);
+    })();
+    </script>
   </body>
 </html>
