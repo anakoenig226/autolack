@@ -91,7 +91,14 @@
         background: var(--wa-green); color: #fff;
         box-shadow: 0 6px 22px rgba(0,0,0,.45), 0 0 0 0 rgba(37,211,102,.55);
         transition: transform .2s ease, background .2s ease;
-        animation: gh-wa-ring 3.4s ease-out 1.5s 3;
+        animation: gh-wa-in .45s ease-out 1.8s both,
+                   gh-wa-ring 3.4s ease-out 2.6s 3;
+      }
+      /* Nur die Deckkraft animieren — sonst ueberschriebe der Endzustand
+         der Animation das transform des Hover-Zustands. */
+      @keyframes gh-wa-in {
+        from { opacity: 0; }
+        to   { opacity: 1; }
       }
       #gh-wa:hover { background: var(--wa-green-dark); transform: scale(1.06); }
       #gh-wa svg { width: 32px; height: 32px; }

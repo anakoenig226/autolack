@@ -323,3 +323,36 @@ Der udmedia-Tarif „StartXL 3.0" hostet nach dem Löschen der alten Dateien
 keine Website mehr, wird aber für die Domainregistrierung weiter benötigt.
 Ein kleinerer Domain-Tarif könnte reichen — bei udmedia erfragen, dabei
 unbedingt den Erhalt beider Domains sicherstellen.
+
+---
+
+## Kontakt-Ebene: WhatsApp im Vordergrund (05.10.2026)
+
+**Ausgangslage:** Alle Anfrage-Schaltflächen sprangen nur an das Seitenende
+(`#kontakt`), und die einzige echte Handlung dort war ein E-Mail-Link.
+WhatsApp existierte nur als 48-px-Symbol im Fußbereich bei Pixel 13.704 —
+praktisch unsichtbar.
+
+**Umgesetzt** als eigenständiger Block am Ende von `index.html`, klar
+kommentiert. Der minifizierte React-Build wurde **nicht** angefasst; der
+Block lässt sich ersatzlos löschen, dann ist alles wie vorher.
+
+1. **Schwebender WhatsApp-Button** — 60 px, Markengrün `#25D366`, fest unten
+   rechts auf allen Seiten, blendet nach dem Ladebildschirm ein.
+2. **Kontaktauswahl** — die Schaltflächen „TERMIN ANFRAGEN" (Kopfzeile) und
+   „Schaden schätzen & Termin anfragen" öffnen ein Fenster mit WhatsApp
+   zuoberst, darunter Anrufen und E-Mail.
+3. **Fußbereich** — das WhatsApp-Symbol ist jetzt grün statt grau.
+4. Der Navigationspunkt **„Kontakt" bleibt ein Sprunglink** zum Abschnitt,
+   damit Adresse und Öffnungszeiten auffindbar bleiben.
+
+### Technische Hinweise für spätere Änderungen
+
+- Die Klickerkennung läuft über **Delegation auf `document`** (Capture-Phase).
+  Direkte Listener auf den Schaltflächen würden bei React-Neuaufbauten verloren
+  gehen.
+- Die Einblend-Animation animiert **nur die Deckkraft**. Würde sie `transform`
+  animieren, überschriebe ihr Endzustand (`animation-fill-mode: both`) das
+  `transform` des Hover-Zustands.
+- Nummern stehen als Konstanten `WA`, `TEL`, `MAIL` am Anfang des Skripts —
+  dort ändern, nicht im Markup suchen.
