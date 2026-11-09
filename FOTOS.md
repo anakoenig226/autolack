@@ -7,7 +7,9 @@ wurden, sowie zwei rechnerisch erzeugte Lackflächen.
 
 | Datei | Wo | Zuschnitt |
 |---|---|---|
-| `betrieb-aussen.webp` | unter dem Aufmacher | 2:1, volle Bildbreite erhalten |
+| `betrieb-aussen.webp` | Bildbahn, Desktop | **echtes Foto**, schmales Band 3,7:1 |
+| `betrieb-aussen-schmal.webp` | Bildbahn, Handy | **echtes Foto**, 1,9:1 |
+| `_original-gebaeude.jpg` | unbeschnittenes Original | zum Neuzuschneiden |
 | `felgen.webp` | Galerie „Aus der Werkstatt" | 1:1 |
 | `motorrad.webp` | Galerie | 1:1 |
 | `boot.webp` | Galerie | 1:1 |

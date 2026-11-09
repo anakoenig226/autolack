@@ -133,11 +133,10 @@ p:last-child { margin-bottom: 0; }
 
 /* randlose Bildbahn */
 .bahn { position: relative; margin: clamp(36px, 6vw, 60px) 0 0; }
-.bahn img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; }
-@media (max-width: 620px) { .bahn img { aspect-ratio: 4 / 3; } }
+.bahn img, .bahn picture { width: 100%; height: auto; display: block; }
 .bahn::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(to bottom, rgba(12,9,9,.6), transparent 26%, rgba(12,9,9,.25) 60%, var(--nacht));
+  background: linear-gradient(to bottom, rgba(12,9,9,.45), transparent 20%, transparent 52%, rgba(12,9,9,.8) 90%, var(--nacht));
 }
 
 /* Kennzahlen, überlappen die Bildbahn */
