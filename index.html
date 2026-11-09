@@ -1,247 +1,298 @@
 <!doctype html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Autolackiererei Göhring · Karosserie & Lack in Arnstadt seit 1859</title>
-    <meta name="description" content="Meisterbetrieb für Karosserie und Lack in Arnstadt, seit 1859 in Familienhand. Reparaturlackierung, Unfallinstandsetzung, Spot Repair, Scheinwerfer- und Industrielackierung." />
-    <link rel="canonical" href="https://www.lack-goehring.de/" />
-    <meta name="theme-color" content="#0A0A0A" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Auto-Lackiererei Göhring GmbH · Karosserie und Lack in Arnstadt</title>
+<meta name="description" content="Meisterbetrieb für Karosserie und Lack in Arnstadt, seit 1859 in Familienhand. Unfallinstandsetzung, Lackierung, Scheinwerfer-Aufbereitung und Spot-Repair. Hol- und Bringservice, Gutachten, Abrechnung mit der Versicherung.">
+<link rel="canonical" href="https://www.lack-goehring.de/">
+<meta name="theme-color" content="#FAF8F4">
 
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Auto-Lackiererei Göhring GmbH" />
-    <meta property="og:locale" content="de_DE" />
-    <meta property="og:url" content="https://www.lack-goehring.de/" />
-    <meta property="og:title" content="Autolackiererei Göhring · Karosserie & Lack in Arnstadt seit 1859" />
-    <meta property="og:description" content="Meisterbetrieb für Karosserie und Lack in Arnstadt, seit 1859 in Familienhand. Reparaturlackierung, Unfallinstandsetzung, Spot Repair, Scheinwerfer- und Industrielackierung." />
-    <meta property="og:image" content="https://www.lack-goehring.de/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary_large_image" />
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Auto-Lackiererei Göhring GmbH">
+<meta property="og:url" content="https://www.lack-goehring.de/">
+<meta property="og:title" content="Auto-Lackiererei Göhring GmbH · Karosserie und Lack in Arnstadt">
+<meta property="og:description" content="Meisterbetrieb für Karosserie und Lack in Arnstadt, seit 1859 in Familienhand.">
+<meta property="og:image" content="https://www.lack-goehring.de/assets/vorschau.png">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoBodyShop",
-      "name": "Auto-Lackiererei Göhring GmbH",
-      "url": "https://www.lack-goehring.de/",
-      "image": "https://www.lack-goehring.de/og-image.jpg",
-      "telephone": "+49 3628 641510",
-      "faxNumber": "+49 3628 6996100",
-      "email": "info@lack-goehring.de",
-      "foundingDate": "1859",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "August-Brömel-Straße 3",
-        "postalCode": "99310",
-        "addressLocality": "Arnstadt",
-        "addressRegion": "Thüringen",
-        "addressCountry": "DE"
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-          "opens": "07:00",
-          "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Friday",
-          "opens": "07:00",
-          "closes": "14:00"
-        }
-      ]
-    }
-    </script>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/stil.css">
 
-    <script type="module" crossorigin src="/assets/index-zzzl8Ipo.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DHKbaW2w.css">
-  </head>
-  <body>
-    <div id="root"></div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoBodyShop",
+  "name": "Auto-Lackiererei Göhring GmbH",
+  "url": "https://www.lack-goehring.de/",
+  "telephone": "+49 3628 641510",
+  "faxNumber": "+49 3628 6996100",
+  "email": "info@lack-goehring.de",
+  "foundingDate": "1859",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "August-Brömel-Straße 3",
+    "postalCode": "99310",
+    "addressLocality": "Arnstadt",
+    "addressRegion": "Thüringen",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "07:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "07:00", "closes": "14:00" }
+  ]
+}
+</script>
+</head>
+<body>
 
-    <!-- ===================================================================
-         Kontakt-Ebene: schwebender WhatsApp-Button + Kontaktauswahl.
-         Bewusst ausserhalb von #root, damit der React-Code unberuehrt bleibt.
-         Entfernen = diesen Block loeschen, sonst aendert sich nichts.
-         =================================================================== -->
-    <style>
-      :root { --wa-green:#25D366; --wa-green-dark:#1EBE5A; --gh-copper:#C07A45; }
+<header class="kopf">
+  <div class="huelle">
+    <a href="/" aria-label="Zur Startseite"><img src="/assets/logo-rot.png" alt="Auto-Lackiererei Göhring"></a>
+    <nav>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#betrieb">Betrieb</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="kopf-aktion">
+      <a class="kopf-tel" href="tel:+493628641510">03628 / 64 15 10</a>
+      <a class="knopf knopf-wa knopf-klein" href="https://wa.me/491735755304?text=Hallo%2C%20ich%20h%C3%A4tte%20eine%20Frage%20zu%20meinem%20Fahrzeug." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.4.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2.1-.4 0-.5L9 6.9c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.5-.4z"/><path d="M12 2C6.5 2 2.1 6.5 2.1 11.9c0 1.8.5 3.5 1.3 5L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 9.9-4.4 9.9-9.9S17.5 2 12 2zm0 18c-1.5 0-2.9-.4-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 0 1-1.3-4.4c0-4.5 3.7-8.2 8.3-8.2s8.2 3.7 8.2 8.2-3.7 8.2-8.2 8.2z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
 
-      /* WhatsApp-Symbol im Fussbereich in Markenfarbe */
-      #root a[href*="wa.me"] {
-        background: var(--wa-green) !important;
-        color: #fff !important;
-        border-color: var(--wa-green) !important;
-      }
-      #root a[href*="wa.me"] svg { color: #fff !important; }
+<main>
 
-      /* --- Schwebender Button --- */
-      #gh-wa {
-        position: fixed; z-index: 2147483000;
-        right: calc(16px + env(safe-area-inset-right, 0px));
-        bottom: calc(16px + env(safe-area-inset-bottom, 0px));
-        width: 60px; height: 60px; border-radius: 50%;
-        display: flex; align-items: center; justify-content: center;
-        background: var(--wa-green); color: #fff;
-        box-shadow: 0 6px 22px rgba(0,0,0,.45), 0 0 0 0 rgba(37,211,102,.55);
-        transition: transform .2s ease, background .2s ease;
-        animation: gh-wa-in .45s ease-out 1.8s both,
-                   gh-wa-ring 3.4s ease-out 2.6s 3;
-      }
-      /* Nur die Deckkraft animieren — sonst ueberschriebe der Endzustand
-         der Animation das transform des Hover-Zustands. */
-      @keyframes gh-wa-in {
-        from { opacity: 0; }
-        to   { opacity: 1; }
-      }
-      #gh-wa:hover { background: var(--wa-green-dark); transform: scale(1.06); }
-      #gh-wa svg { width: 32px; height: 32px; }
-      @keyframes gh-wa-ring {
-        0%   { box-shadow: 0 6px 22px rgba(0,0,0,.45), 0 0 0 0 rgba(37,211,102,.55); }
-        70%  { box-shadow: 0 6px 22px rgba(0,0,0,.45), 0 0 0 16px rgba(37,211,102,0); }
-        100% { box-shadow: 0 6px 22px rgba(0,0,0,.45), 0 0 0 0 rgba(37,211,102,0); }
-      }
-      @media (prefers-reduced-motion: reduce) { #gh-wa { animation: none; } }
+  <!-- ===== Aufmacher ===== -->
+  <section class="auf">
+    <div class="huelle">
+      <span class="marke">Karosserie &amp; Lack · Arnstadt</span>
+      <h1>Karosserie und Lack aus Arnstadt, seit 1859.</h1>
+      <p class="fuehrung">
+        Unfallschäden, Lackierungen, Scheinwerfer und Spot-Repair — für alle Marken.
+        Wir übernehmen das Gutachten, rechnen in den meisten Fällen direkt mit Ihrer
+        Versicherung ab und holen Ihr Fahrzeug auf Wunsch bei Ihnen ab.
+      </p>
+      <div class="auf-aktion">
+        <a class="knopf knopf-wa" href="https://wa.me/491735755304?text=Hallo%2C%20ich%20h%C3%A4tte%20eine%20Frage%20zu%20meinem%20Fahrzeug." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2.1 6.5 2.1 11.9c0 1.8.5 3.5 1.3 5L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 9.9-4.4 9.9-9.9S17.5 2 12 2zm0 18c-1.5 0-2.9-.4-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 0 1-1.3-4.4c0-4.5 3.7-8.2 8.3-8.2s8.2 3.7 8.2 8.2-3.7 8.2-8.2 8.2z"/><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.4.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2.1-.4 0-.5L9 6.9c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.5-.4z"/></svg>
+          Foto schicken, Preis erfahren
+        </a>
+        <a class="knopf knopf-linie" href="tel:+493628641510">03628 / 64 15 10 anrufen</a>
+      </div>
 
-      /* --- Auswahlfenster --- */
-      #gh-pick[hidden] { display: none !important; }
-      #gh-pick {
-        position: fixed; inset: 0; z-index: 2147483100;
-        display: flex; align-items: center; justify-content: center;
-        padding: 20px; background: rgba(0,0,0,.72);
-        -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
-      }
-      #gh-pick .gh-card {
-        width: 100%; max-width: 380px; background: #121212;
-        border: 1px solid rgba(255,255,255,.12); border-radius: 18px;
-        padding: 26px 22px 22px; color: #fff; position: relative;
-        box-shadow: 0 24px 60px rgba(0,0,0,.6);
-      }
-      #gh-pick h2 {
-        font-family: "Instrument Serif", Georgia, serif;
-        font-size: 25px; line-height: 1.2; margin: 0 0 6px; font-weight: 400;
-      }
-      #gh-pick .gh-sub { font-size: 13px; opacity: .62; margin: 0 0 20px; }
-      #gh-pick a {
-        display: flex; align-items: center; gap: 13px;
-        padding: 14px 16px; border-radius: 12px; margin-bottom: 10px;
-        text-decoration: none; color: #fff;
-        border: 1px solid rgba(255,255,255,.14);
-        transition: background .18s ease, border-color .18s ease;
-      }
-      #gh-pick a:hover { background: rgba(255,255,255,.07); }
-      #gh-pick a.gh-wa-opt {
-        background: var(--wa-green); border-color: var(--wa-green);
-      }
-      #gh-pick a.gh-wa-opt:hover { background: var(--wa-green-dark); }
-      #gh-pick a > span { display: block; min-width: 0; }
-      #gh-pick .gh-l1 { display: block; font-size: 15px; font-weight: 600; letter-spacing: .01em; }
-      #gh-pick .gh-l2 { display: block; font-size: 12px; opacity: .72; margin-top: 3px; line-height: 1.35; }
-      #gh-pick svg { flex: 0 0 auto; width: 22px; height: 22px; }
-      #gh-pick .gh-x {
-        position: absolute; top: 12px; right: 12px;
-        width: 34px; height: 34px; border: 0; border-radius: 50%;
-        background: rgba(255,255,255,.08); color: #fff;
-        font-size: 19px; line-height: 1; cursor: pointer;
-      }
-      #gh-pick .gh-x:hover { background: rgba(255,255,255,.16); }
-      #gh-pick .gh-note {
-        font-size: 11px; opacity: .45; margin: 14px 0 0; text-align: center;
-      }
-    </style>
+      <div class="zahlen">
+        <div><b>1859</b><span>gegründet</span></div>
+        <div><b>6.</b><span>Generation</span></div>
+        <div><b>10</b><span>Mitarbeiter</span></div>
+        <div><b>4,9</b><span>aus 36 Google-Bewertungen</span></div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-    (function () {
-      var WA   = "https://wa.me/491735755304?text=" +
-                 encodeURIComponent("Hallo, ich habe eine Frage zu meinem Fahrzeug.");
-      var TEL  = "tel:+493628641510";
-      var MAIL = "mailto:info@lack-goehring.de?subject=" +
-                 encodeURIComponent("Terminanfrage – Schaden schätzen");
+  <!-- ===== Leistungen ===== -->
+  <section id="leistungen">
+    <div class="huelle">
+      <div class="abschnitt-kopf">
+        <span class="marke">Leistungen</span>
+        <h2>Was wir machen</h2>
+        <p>Vom kleinen Kratzer bis zum Totalschaden — und darüber hinaus auch Arbeiten,
+           die nichts mit Fahrzeugen zu tun haben.</p>
+      </div>
+      <div class="gitter">
+        <article class="karte">
+          <span class="nr">01</span>
+          <h3>Reparaturlackierung</h3>
+          <p>Teil- oder Komplettlackierung. Der Farbton wird nach Werkscode angemischt
+             und direkt am Fahrzeug abgeglichen — Lack verändert sich mit den Jahren.</p>
+        </article>
+        <article class="karte">
+          <span class="nr">02</span>
+          <h3>Unfallinstandsetzung</h3>
+          <p>Vermessen, richten, lackieren — nach Herstellervorgaben, für alle Marken
+             und Modelle. Auf Wunsch mit Gutachten und Abrechnung über die Versicherung.</p>
+        </article>
+        <article class="karte">
+          <span class="nr">03</span>
+          <h3>Scheinwerfer-Aufbereitung</h3>
+          <p>Vergilbte oder zerkratzte Streuscheiben werden abgeschliffen, poliert und
+             versiegelt. Günstiger als ein Austausch, und die Lichtausbeute stimmt wieder.</p>
+        </article>
+        <article class="karte">
+          <span class="nr">04</span>
+          <h3>Spot-Repair</h3>
+          <p>Kleine Schäden punktgenau beheben, statt ein ganzes Bauteil zu lackieren.
+             Spart Zeit und Geld und ist bei Leasingrückgaben oft die bessere Wahl.</p>
+        </article>
+        <article class="karte">
+          <span class="nr">05</span>
+          <h3>Industrielackierung</h3>
+          <p>Beschichtung von Metall-, Glas- und Sonderbauteilen im selben Standard wie
+             am Fahrzeug. Auch Einzelstücke und Sondermaße.</p>
+        </article>
+        <article class="karte">
+          <span class="nr">06</span>
+          <h3>LKW und Nutzfahrzeuge</h3>
+          <p>Lackierung und Beschriftung für Transporter, LKW und Busse — auch für ganze
+             Fuhrparks in einheitlicher Gestaltung.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-      var ICON_WA = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.02h-.01c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.22-8.23 8.22z"/></svg>';
-      var ICON_TEL  = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.26-1.26a2 2 0 0 1 2.11-.45c.9.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
-      var ICON_MAIL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg>';
+  <!-- ===== Ablauf ===== -->
+  <section id="ablauf">
+    <div class="huelle">
+      <div class="abschnitt-kopf">
+        <span class="marke">Ablauf</span>
+        <h2>Wie es abläuft</h2>
+        <p>Der schnellste Weg zu einer ersten Einschätzung ist ein Foto per WhatsApp.
+           Meist können wir Ihnen noch am selben Tag sagen, womit Sie rechnen müssen.</p>
+      </div>
+      <div class="schritte">
+        <div class="schritt">
+          <b>Schritt 1</b>
+          <h3>Schaden zeigen</h3>
+          <p>Foto per WhatsApp schicken, anrufen oder einfach vorbeikommen.</p>
+        </div>
+        <div class="schritt">
+          <b>Schritt 2</b>
+          <h3>Kostenvoranschlag</h3>
+          <p>Sie bekommen eine nachvollziehbare Kalkulation. Bei Unfallschäden
+             organisieren wir das Gutachten.</p>
+        </div>
+        <div class="schritt">
+          <b>Schritt 3</b>
+          <h3>In der Werkstatt</h3>
+          <p>Richten, vorbereiten, lackieren in der Kabine, aushärten lassen.</p>
+        </div>
+        <div class="schritt">
+          <b>Schritt 4</b>
+          <h3>Abholung</h3>
+          <p>Endkontrolle und Politur. Auf Wunsch bringen wir das Fahrzeug zu Ihnen zurück.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      /* ---------- schwebender Button ---------- */
-      var fab = document.createElement("a");
-      fab.id = "gh-wa";
-      fab.href = WA;
-      fab.target = "_blank";
-      fab.rel = "noopener";
-      fab.setAttribute("aria-label", "Anfrage über WhatsApp senden");
-      fab.title = "Per WhatsApp anfragen";
-      fab.innerHTML = ICON_WA;
-      document.body.appendChild(fab);
+  <!-- ===== Unfall ===== -->
+  <section>
+    <div class="huelle">
+      <div class="band">
+        <span class="marke" style="color:#E8938F">Nach einem Unfall</span>
+        <h2>Sie müssen sich um nichts kümmern</h2>
+        <p>Wir holen Ihr Fahrzeug ab und bringen es repariert zurück, beauftragen einen
+           Gutachter und rechnen in den meisten Fällen direkt mit der Versicherung ab.
+           Sie bekommen von der Abwicklung möglichst wenig mit.</p>
+        <div class="band-aktion">
+          <a class="knopf knopf-rot" href="tel:+493628641510">Jetzt anrufen</a>
+          <a class="knopf knopf-linie" href="https://wa.me/491735755304?text=Hallo%2C%20ich%20hatte%20einen%20Unfall%20und%20br%C3%A4uchte%20Hilfe." target="_blank" rel="noopener">Per WhatsApp melden</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      /* ---------- Auswahlfenster ---------- */
-      var ov = document.createElement("div");
-      ov.id = "gh-pick";
-      ov.hidden = true;
-      ov.setAttribute("role", "dialog");
-      ov.setAttribute("aria-modal", "true");
-      ov.setAttribute("aria-label", "Kontaktmöglichkeit wählen");
-      ov.innerHTML =
-        '<div class="gh-card">' +
-          '<button class="gh-x" type="button" aria-label="Schließen">&times;</button>' +
-          '<h2>Wie dürfen wir Sie erreichen?</h2>' +
-          '<p class="gh-sub">Schildern Sie uns Ihren Schaden — Sie hören innerhalb eines Werktags von uns.</p>' +
-          '<a class="gh-wa-opt" href="' + WA + '" target="_blank" rel="noopener">' + ICON_WA +
-            '<span><span class="gh-l1">WhatsApp schreiben</span>' +
-            '<span class="gh-l2">Am schnellsten — Fotos direkt mitschicken</span></span></a>' +
-          '<a href="' + TEL + '">' + ICON_TEL +
-            '<span><span class="gh-l1">Anrufen</span>' +
-            '<span class="gh-l2">03628 / 64 15 10</span></span></a>' +
-          '<a href="' + MAIL + '">' + ICON_MAIL +
-            '<span><span class="gh-l1">E-Mail schreiben</span>' +
-            '<span class="gh-l2">info@lack-goehring.de</span></span></a>' +
-          '<p class="gh-note">Mo–Do 7–18 Uhr · Fr 7–14 Uhr</p>' +
-        '</div>';
-      document.body.appendChild(ov);
+  <!-- ===== Betrieb ===== -->
+  <section id="betrieb">
+    <div class="huelle">
+      <div class="ueber">
+        <div>
+          <span class="marke">Der Betrieb</span>
+          <h2>Seit sechs Generationen in Familienhand</h2>
+          <p style="margin-top:20px">
+            Den Betrieb gibt es seit 1859. Damals wurden hier Kutschen lackiert, heute sind
+            es Fahrzeuge mit Sensorik und Assistenzsystemen. Die Technik hat sich mehrfach
+            komplett geändert — der Anspruch an die Arbeit nicht.
+          </p>
+          <p>
+            Geführt wird die Auto-Lackiererei Göhring GmbH heute von Jana Göhring-König,
+            gemeinsam mit einem zehnköpfigen Team.
+          </p>
+          <blockquote class="zitat">
+            „Ich habe Betriebswirtschaft studiert und danach noch die Lackiererlehre gemacht.
+            Ich wollte nicht nur die Zahlen des Betriebs kennen, sondern auch das Handwerk."
+            <footer>Jana Göhring-König, Geschäftsführerin</footer>
+          </blockquote>
+        </div>
+        <div>
+          <div class="bewertung">
+            <b>4,9</b>
+            <span>von 5 Sternen, aus 36 Google-Bewertungen</span>
+            <a href="https://www.google.com/search?q=Auto-Lackiererei+G%C3%B6hring+Arnstadt+Bewertungen" target="_blank" rel="noopener">Bewertungen ansehen →</a>
+          </div>
+          <!-- Platz für ein Foto: siehe FOTOS.md -->
+        </div>
+      </div>
+    </div>
+  </section>
 
-      var lastFocus = null;
-      function open(e) {
-        if (e) e.preventDefault();
-        lastFocus = document.activeElement;
-        ov.hidden = false;
-        document.documentElement.style.overflow = "hidden";
-        var first = ov.querySelector("a");
-        if (first) first.focus();
-      }
-      function close() {
-        ov.hidden = true;
-        document.documentElement.style.overflow = "";
-        if (lastFocus && lastFocus.focus) lastFocus.focus();
-      }
-      ov.addEventListener("click", function (e) {
-        if (e.target === ov || e.target.classList.contains("gh-x")) close();
-      });
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape" && !ov.hidden) close();
-      });
-      ov.querySelectorAll(".gh-card a").forEach(function (a) {
-        a.addEventListener("click", function () { setTimeout(close, 120); });
-      });
+  <!-- ===== Kontakt ===== -->
+  <section id="kontakt">
+    <div class="huelle">
+      <div class="abschnitt-kopf">
+        <span class="marke">Kontakt</span>
+        <h2>Schreiben Sie uns</h2>
+        <p>Am schnellsten geht es per WhatsApp — Fotos vom Schaden können Sie gleich
+           mitschicken. Sie hören innerhalb eines Werktags von uns.</p>
+      </div>
+      <div class="kontakt">
+        <div class="wege">
+          <a class="weg weg-wa" href="https://wa.me/491735755304?text=Hallo%2C%20ich%20h%C3%A4tte%20eine%20Frage%20zu%20meinem%20Fahrzeug." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2.1 6.5 2.1 11.9c0 1.8.5 3.5 1.3 5L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 9.9-4.4 9.9-9.9S17.5 2 12 2zm0 18c-1.5 0-2.9-.4-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 0 1-1.3-4.4c0-4.5 3.7-8.2 8.3-8.2s8.2 3.7 8.2 8.2-3.7 8.2-8.2 8.2z"/><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.4.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2.1-.4 0-.5L9 6.9c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.5-.4z"/></svg>
+            <span><b>WhatsApp schreiben</b><span>Fotos direkt mitschicken</span></span>
+          </a>
+          <a class="weg" href="tel:+493628641510">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <span><b>Anrufen</b><span>03628 / 64 15 10</span></span>
+          </a>
+          <a class="weg" href="mailto:info@lack-goehring.de?subject=Anfrage%20%C3%BCber%20die%20Website">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+            <span><b>E-Mail schreiben</b><span>info@lack-goehring.de</span></span>
+          </a>
+        </div>
 
-      /* ---------- Anfrage-Schaltflächen abfangen ----------
-         Delegiert auf document, damit React-Neuaufbauten nichts kaputtmachen.
-         Die Navigationsleiste ("Kontakt") bleibt bewusst ein Sprunglink.     */
-      document.addEventListener("click", function (e) {
-        var a = e.target.closest && e.target.closest("a");
-        if (!a || ov.contains(a) || a === fab) return;
-        var href = a.getAttribute("href") || "";
-        var txt  = (a.innerText || "").toLowerCase();
-        var isCta = /termin anfragen|schaden sch/.test(txt);
-        if (!isCta) return;
-        if (href.indexOf("#kontakt") === -1 && href.indexOf("mailto:") !== 0) return;
-        open(e);
-      }, true);
-    })();
-    </script>
-  </body>
+        <dl class="daten">
+          <dt>Adresse</dt>
+          <dd>
+            <address>
+              Auto-Lackiererei Göhring GmbH<br>
+              August-Brömel-Straße 3<br>
+              99310 Arnstadt
+            </address>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=August-Br%C3%B6mel-Stra%C3%9Fe+3+99310+Arnstadt" target="_blank" rel="noopener">Route planen →</a>
+          </dd>
+          <dt>Öffnungszeiten</dt>
+          <dd>Montag bis Donnerstag 7 – 18 Uhr<br>Freitag 7 – 14 Uhr</dd>
+          <dt>Telefon und Fax</dt>
+          <dd><a href="tel:+493628641510">03628 / 64 15 10</a><br>Fax 03628 / 69 96 100</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="fuss">
+  <div class="huelle">
+    <img src="/assets/logo-rot.png" alt="Auto-Lackiererei Göhring">
+    <nav>
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz">Datenschutz</a>
+    </nav>
+    <small>© 2026 Auto-Lackiererei Göhring GmbH · August-Brömel-Straße 3 · 99310 Arnstadt</small>
+  </div>
+</footer>
+
+<a class="wa-schwebend" href="https://wa.me/491735755304?text=Hallo%2C%20ich%20h%C3%A4tte%20eine%20Frage%20zu%20meinem%20Fahrzeug."
+   target="_blank" rel="noopener" aria-label="Anfrage über WhatsApp senden" title="Per WhatsApp anfragen">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2.1 6.5 2.1 11.9c0 1.8.5 3.5 1.3 5L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 9.9-4.4 9.9-9.9S17.5 2 12 2zm0 18c-1.5 0-2.9-.4-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 0 1-1.3-4.4c0-4.5 3.7-8.2 8.3-8.2s8.2 3.7 8.2 8.2-3.7 8.2-8.2 8.2z"/><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.4.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2.1-.4 0-.5L9 6.9c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.5-.4z"/></svg>
+</a>
+
+</body>
 </html>
