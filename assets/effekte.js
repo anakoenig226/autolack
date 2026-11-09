@@ -9,7 +9,7 @@
 
   /* --- 1. Abschnitte beim Hereinscrollen einblenden --- */
   var ziele = document.querySelectorAll(
-    ".abschnitt-kopf, .karte, .schritt, .band, .ueber > div, .wege > *, .daten, .zahlen, .flaeche, .galerie figure"
+    ".abschnitt-kopf, .karte, .schritt, .band, .ueber > div, .wege > *, .daten, .zahlen div, .flaeche, .galerie figure"
   );
   if (ruhig || !("IntersectionObserver" in window)) {
     ziele.forEach(function (e) { e.classList.add("da"); });
@@ -62,7 +62,7 @@
   /* --- 3. Kopfzeile verdichten + Aufmacher + Parallaxe --- */
   var kopf  = document.querySelector(".kopf");
   var text  = document.querySelector(".auf-text");
-  var bilder = [].slice.call(document.querySelectorAll(".flaeche img"));
+  var bilder = [].slice.call(document.querySelectorAll(".bahn img, .flaeche img"));
   var offen = false;
 
   function zeichne() {
