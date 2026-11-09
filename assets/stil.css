@@ -236,12 +236,13 @@ section { padding: clamp(52px, 8vw, 92px) 0; }
 .flaeche-breit img { aspect-ratio: 2 / 1; object-fit: cover; }
 @media (max-width: 620px) { .flaeche-breit img { aspect-ratio: 4 / 3; } }
 .flaeche-hoch { margin-top: 18px; }
-.flaeche-hoch img { aspect-ratio: 1 / 1; object-fit: cover; }
+.flaeche-hoch img { aspect-ratio: 4 / 5; object-fit: cover; object-position: center 22%; }
 .flaeche figcaption {
   position: absolute; left: 0; right: 0; bottom: 0;
-  padding: 16px 20px; font-size: 12px; letter-spacing: .1em;
-  text-transform: uppercase; color: rgba(255,255,255,.72);
-  background: linear-gradient(to top, rgba(0,0,0,.55), transparent);
+  padding: 34px 20px 16px; font-size: 12px; letter-spacing: .1em;
+  text-transform: uppercase; color: #fff; font-weight: 500;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  background: linear-gradient(to top, rgba(0,0,0,.82), rgba(0,0,0,.45) 45%, transparent);
 }
 
 /* ---------- Kopfzeile verdichtet sich ---------- */
