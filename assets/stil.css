@@ -217,3 +217,53 @@ section { padding: clamp(52px, 8vw, 92px) 0; }
 
 
 :focus-visible { outline: 2px solid var(--rot); outline-offset: 3px; border-radius: 4px; }
+
+/* ============================================================
+   Flaechen und Bewegung
+   Alle Effekte sind dezent gehalten und schalten sich bei
+   "prefers-reduced-motion" vollstaendig ab.
+   ============================================================ */
+
+/* ---------- Lack-/Bildflaechen ---------- */
+.flaeche {
+  margin: clamp(40px, 6vw, 64px) 0 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  background: #141312;
+}
+.flaeche img { width: 100%; display: block; }
+.flaeche-breit img { aspect-ratio: 21 / 8; object-fit: cover; }
+.flaeche-hoch { margin-top: 18px; }
+.flaeche-hoch img { aspect-ratio: 1 / 1; object-fit: cover; }
+.flaeche figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 16px 20px; font-size: 12px; letter-spacing: .1em;
+  text-transform: uppercase; color: rgba(255,255,255,.72);
+  background: linear-gradient(to top, rgba(0,0,0,.55), transparent);
+}
+
+/* ---------- Kopfzeile verdichtet sich ---------- */
+.kopf { transition: box-shadow .25s ease; }
+.kopf .huelle { transition: height .25s ease; }
+.kopf img { transition: height .25s ease; }
+.kopf.eng .huelle { height: 62px; }
+.kopf.eng img { height: 36px; }
+.kopf.eng { box-shadow: 0 1px 14px rgba(0,0,0,.07); }
+
+/* ---------- Einblenden beim Scrollen ---------- */
+.zeig { opacity: 0; transform: translateY(18px); }
+.zeig.da {
+  opacity: 1; transform: none;
+  transition: opacity .6s cubic-bezier(.22,.7,.3,1), transform .6s cubic-bezier(.22,.7,.3,1);
+}
+
+/* ---------- Aufmacher beim Wegscrollen ---------- */
+.auf-text { will-change: transform, opacity; transform-origin: left top; }
+
+@media (prefers-reduced-motion: reduce) {
+  .zeig { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .auf-text { transform: none !important; opacity: 1 !important; }
+  .kopf .huelle, .kopf img { transition: none; }
+  .flaeche img { transform: none !important; }
+}

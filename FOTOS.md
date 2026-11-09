@@ -39,3 +39,15 @@ und binde sie ein — dafür sind in `index.html` bereits Stellen vorgesehen
 
 Die Dateien kommen nach `assets/bilder/`. Als WebP mit etwa 1600 Pixeln
 Breite sind sie scharf genug und bleiben unter 200 KB pro Bild.
+
+## Die berechneten Lackflächen
+
+In `assets/bilder/` liegen zwei Flächen, die ich rechnerisch erzeugt habe —
+**keine Fotos, kein fremdes Material**. Sie füllen die Bildplätze, bis eure
+eigenen Aufnahmen da sind.
+
+- `lack-breit.webp` — unter dem Aufmacher, später: Werkstatt, weite Aufnahme
+- `lack-rot.webp` — im Abschnitt „Der Betrieb", später: Portrait
+
+Zum Austauschen genügt es, die Datei zu ersetzen oder im `<img src="…">`
+den Pfad zu ändern. Die Zuschnitte (21:8 und 1:1) macht das CSS.
