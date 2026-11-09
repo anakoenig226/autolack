@@ -356,3 +356,48 @@ Block lässt sich ersatzlos löschen, dann ist alles wie vorher.
   `transform` des Hover-Zustands.
 - Nummern stehen als Konstanten `WA`, `TEL`, `MAIL` am Anfang des Skripts —
   dort ändern, nicht im Markup suchen.
+
+---
+
+# NEUBAU — ab November 2026
+
+**Die Website wurde vollständig neu gebaut.** Anlass war eine Forderung der
+Agentur, von der die ursprüngliche Vorlage stammte: Der damals übernommene
+React-Build, die Bilder, Videos und Texte waren deren Material.
+
+Die neue Seite enthält **nichts davon**. Handgeschriebenes HTML und CSS,
+eigene Texte, das echte Firmenlogo, selbst gehostete Schriften.
+
+## Aufbau
+
+| Datei | Zweck |
+|---|---|
+| `index.html` | die gesamte Startseite |
+| `impressum.html`, `datenschutz.html` | Rechtstexte, neu verfasst |
+| `assets/stil.css` | sämtliche Gestaltung, Farben als Variablen ganz oben |
+| `assets/effekte.js` | Scroll-Effekte — kann ersatzlos entfernt werden |
+| `assets/logo-rot.png`, `logo-hell.png` | Firmenlogo, freigestellt |
+| `assets/bilder/` | Fotos und Flächen, siehe `FOTOS.md` |
+| `assets/fonts/` | Archivo und Inter, lokal (keine Google-Verbindung) |
+| `vercel.json` | saubere Adressen, Weiterleitung der alten Leistungsseiten |
+
+Kein Build-Schritt, kein Framework. Datei ändern, `git push` — fertig.
+
+## Was sich gegenüber der alten Seite geändert hat
+
+- **820 KB statt 30 MB**, Seitenlänge mobil halbiert
+- WhatsApp ist durchgängig der erste Kontaktweg
+- Datenschutzerklärung nennt WhatsApp, Hosting und Kartenlink
+- Impressum nach § 5 DDG und § 18 Abs. 2 MStV
+- `/impressum` und `/datenschutz` bleiben gültig, `/leistungen/*` leitet
+  dauerhaft auf die Startseite
+
+## Zurück zur alten Fassung
+
+Falls nötig, liegt der alte Stand weiterhin in der Versionsgeschichte:
+
+    git log --oneline            # Commit vor dem Neubau suchen
+    git revert <commit>          # oder gezielt zuruecksetzen
+
+Die alten Seiten der Agentur sind damit allerdings wieder online — das war
+der Anlass der Auseinandersetzung.
