@@ -2,19 +2,16 @@
 
 ## Aktueller Stand
 
-In `assets/bilder/` liegen fünf Aufnahmen, die im November 2026 bereitgestellt
+In `assets/bilder/` liegen vier Aufnahmen, die im November 2026 bereitgestellt
 wurden, sowie zwei rechnerisch erzeugte Lackflächen.
 
 | Datei | Wo | Zuschnitt |
 |---|---|---|
-| `betrieb-aussen.webp` | Bildbahn, Desktop | **echtes Foto**, schmales Band 3,7:1 |
-| `betrieb-aussen-schmal.webp` | Bildbahn, Handy | **echtes Foto**, 1,9:1 |
-| `_original-gebaeude.jpg` | unbeschnittenes Original | zum Neuzuschneiden |
+| `betrieb-aussen.webp` | unter dem Aufmacher | 2:1, volle Bildbreite erhalten |
 | `felgen.webp` | Galerie „Aus der Werkstatt" | 1:1 |
 | `motorrad.webp` | Galerie | 1:1 |
 | `boot.webp` | Galerie | 1:1 |
-| `jana.webp` | Abschnitt „Der Betrieb" | 4:5, eigenes Foto der Geschäftsführerin |
-| `lack-rot.webp` | derzeit ungenutzt, als Reserve | 1:1, rechnerisch erzeugt |
+| `lack-rot.webp` | Abschnitt „Der Betrieb" | 1:1, rechnerisch erzeugt |
 | `lack-breit.webp` | derzeit ungenutzt, als Reserve | 2:1, rechnerisch erzeugt |
 
 ### Beim Zuschneiden beachtet
@@ -38,7 +35,7 @@ Dateien schicken, Originalgröße. Ich schneide zu und binde ein. Lohnend wären
 | Werkstatt, weite Aufnahme, quer | `betrieb-aussen.webp` |
 | Jemand bei der Arbeit in der Kabine | `felgen.webp` |
 | Vorher/Nachher desselben Schadens | neuer Abschnitt |
-| Portrait Jana Göhring-König in der Werkstatt | `jana.webp` (derzeit ein Selfie) |
+| Portrait Jana Göhring-König in der Werkstatt | `lack-rot.webp` |
 | Außenansicht mit Schild | Kontaktbereich |
 
 ### Tipps
