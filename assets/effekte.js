@@ -9,7 +9,7 @@
 
   /* --- 1. Abschnitte beim Hereinscrollen einblenden --- */
   var ziele = document.querySelectorAll(
-    ".abschnitt-kopf, .karte, .schritt, .band, .ueber > div, .wege > *, .daten, .zahlen, .flaeche"
+    ".abschnitt-kopf, .karte, .schritt, .band, .ueber > div, .wege > *, .daten, .zahlen, .flaeche, .galerie figure"
   );
   if (ruhig || !("IntersectionObserver" in window)) {
     ziele.forEach(function (e) { e.classList.add("da"); });

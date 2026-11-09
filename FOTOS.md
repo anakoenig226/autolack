@@ -1,53 +1,53 @@
-# Fotos für die Website
+# Bilder auf der Website
 
-Die Seite funktioniert bewusst **auch ohne Fotos** — sie wirkt nicht
-unfertig, sondern sachlich. Mit eigenen Aufnahmen wird sie aber deutlich
-stärker, gerade bei einem Handwerksbetrieb.
+## Aktueller Stand
 
-**Wichtig:** Es müssen Fotos aus dem eigenen Betrieb sein. Bilder der
-früheren Agentur dürfen nicht verwendet werden, Bilder aus dem Internet
-ebenso wenig.
+In `assets/bilder/` liegen vier Aufnahmen, die im November 2026 bereitgestellt
+wurden, sowie zwei rechnerisch erzeugte Lackflächen.
 
-## Was gebraucht wird
-
-Ein modernes Handy genügt völlig. Wichtiger als die Kamera ist das Licht.
-
-| # | Motiv | Wofür |
+| Datei | Wo | Zuschnitt |
 |---|---|---|
-| 1 | **Werkstatt, weite Aufnahme** — Halle mit Fahrzeug, quer | Aufmacher oben |
-| 2 | **Jemand bei der Arbeit** — Lackierpistole in der Kabine, von der Seite | Leistungen |
-| 3 | **Detail Lackoberfläche** — Spiegelung in frisch poliertem Lack | Leistungen |
-| 4 | **Vorher/Nachher** — derselbe Schaden, zwei Aufnahmen aus gleicher Position | Ablauf |
-| 5 | **Portrait Jana Göhring-König** — in der Werkstatt, nicht im Büro | Betrieb |
-| 6 | **Das Team** — alle zusammen vor der Halle | Betrieb |
-| 7 | **Außenansicht** mit Schild, damit Kunden das Gebäude wiedererkennen | Kontakt |
+| `betrieb-aussen.webp` | unter dem Aufmacher | 2:1, volle Bildbreite erhalten |
+| `felgen.webp` | Galerie „Aus der Werkstatt" | 1:1 |
+| `motorrad.webp` | Galerie | 1:1 |
+| `boot.webp` | Galerie | 1:1 |
+| `lack-rot.webp` | Abschnitt „Der Betrieb" | 1:1, rechnerisch erzeugt |
+| `lack-breit.webp` | derzeit ungenutzt, als Reserve | 2:1, rechnerisch erzeugt |
 
-## Tipps
+### Beim Zuschneiden beachtet
 
-- **Quer fotografieren**, nicht hochkant — die Seite ist auf breite Bilder ausgelegt.
-- **Tageslicht** nutzen oder die Hallenbeleuchtung komplett einschalten; keine Handy-Blitze.
-- **Aufräumen** im Bildausschnitt. Ein Besen in der Ecke fällt auf dem Foto mehr auf als in echt.
-- Bei Vorher/Nachher **vom selben Standpunkt** fotografieren, sonst wirkt der Vergleich nicht.
-- **Keine Kennzeichen** fremder Kundenfahrzeuge erkennbar lassen, oder vorher fragen.
-- Bei Personenaufnahmen das **Einverständnis der Mitarbeiter** einholen.
+- **Seitlich wurde nichts abgeschnitten**, wo Schrift im Bild steht. Beim
+  Gebäude und beim Boot hätte ein mittiger Zuschnitt das „A" von
+  AUTO-LACKIEREREI gekappt.
+- Auf der Vorlage mit dem Motorrad stand an der Wand **„Auto Lackierei
+  Göhring"** — mit fehlendem „r". Das Bild ist so beschnitten, dass die
+  Wandbeschriftung nicht mehr sichtbar ist.
+- Die Logo-Varianten auf diesen Aufnahmen (mit Autokontur, Sprühpistole,
+  „Seit 1859") weichen vom echten Firmenlogo ab, das in Kopf- und Fußzeile
+  verwendet wird.
 
-## Einbauen
+## Wenn echte Fotos aus dem Betrieb dazukommen
 
-Fotos als JPG oder PNG schicken, Originalgröße. Ich skaliere, beschneide
-und binde sie ein — dafür sind in `index.html` bereits Stellen vorgesehen
-(siehe Kommentar `Platz für ein Foto`).
+Dateien schicken, Originalgröße. Ich schneide zu und binde ein. Lohnend wären:
 
-Die Dateien kommen nach `assets/bilder/`. Als WebP mit etwa 1600 Pixeln
-Breite sind sie scharf genug und bleiben unter 200 KB pro Bild.
+| Motiv | Ersetzt |
+|---|---|
+| Werkstatt, weite Aufnahme, quer | `betrieb-aussen.webp` |
+| Jemand bei der Arbeit in der Kabine | `felgen.webp` |
+| Vorher/Nachher desselben Schadens | neuer Abschnitt |
+| Portrait Jana Göhring-König in der Werkstatt | `lack-rot.webp` |
+| Außenansicht mit Schild | Kontaktbereich |
 
-## Die berechneten Lackflächen
+### Tipps
 
-In `assets/bilder/` liegen zwei Flächen, die ich rechnerisch erzeugt habe —
-**keine Fotos, kein fremdes Material**. Sie füllen die Bildplätze, bis eure
-eigenen Aufnahmen da sind.
+- **Quer** fotografieren, nicht hochkant.
+- **Tageslicht** oder volle Hallenbeleuchtung, keine Handy-Blitze.
+- Im Bildausschnitt **aufräumen**.
+- **Keine fremden Kennzeichen** erkennbar lassen.
+- Bei Personenaufnahmen das **Einverständnis** der Mitarbeiter einholen.
 
-- `lack-breit.webp` — unter dem Aufmacher, später: Werkstatt, weite Aufnahme
-- `lack-rot.webp` — im Abschnitt „Der Betrieb", später: Portrait
+### Technisch
 
-Zum Austauschen genügt es, die Datei zu ersetzen oder im `<img src="…">`
-den Pfad zu ändern. Die Zuschnitte (21:8 und 1:1) macht das CSS.
+Nach `assets/bilder/`, als WebP, etwa 1800 px Breite für quer, 900 px für
+quadratisch, Qualität 82. Die Zuschnitte macht das CSS über `aspect-ratio`
+und `object-fit: cover` — im HTML muss nur der Dateiname stimmen.
