@@ -401,3 +401,28 @@ Falls nötig, liegt der alte Stand weiterhin in der Versionsgeschichte:
 
 Die alten Seiten der Agentur sind damit allerdings wieder online — das war
 der Anlass der Auseinandersetzung.
+
+---
+
+## Leistungsseiten (seit 19.11.2026)
+
+Unter `/leistungen/` liegen eigene Seiten für die wichtigsten Leistungen:
+
+| Adresse | Zielt auf die Suche nach |
+|---|---|
+| `/leistungen/autolackierung` | lackiererei / lackierer / autolackierer arnstadt |
+| `/leistungen/unfallinstandsetzung` | unfallschaden, karosserie arnstadt |
+| `/leistungen/smart-repair` | smart repair arnstadt |
+| `/leistungen/scheinwerfer-aufbereitung` | scheinwerfer aufbereiten |
+
+Hintergrund: Die Startseite allein hatte nur 641 Wörter. Für Suchbegriffe ohne
+Firmennamen reichte das nicht — laut Search Console Position 14 bis 44 bei null
+Klicks.
+
+**Wichtig:** In `vercel.json` stand früher eine Weiterleitung
+`/leistungen/*  ->  /#leistungen`. Die ist entfernt. Wenn sie je wieder
+eingetragen wird, sind alle Leistungsseiten schlagartig nicht mehr erreichbar.
+
+Noch nicht veröffentlicht: `fahrzeugaufbereitung-ENTWURF.html` (eine Ebene über
+dem Repository). Erst online stellen, wenn bestätigt ist, dass der Betrieb
+komplette Fahrzeugaufbereitung anbietet.
